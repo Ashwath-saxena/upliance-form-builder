@@ -20,7 +20,7 @@ function App() {
         <Router>
           <AppLayout>
             <Routes>
-              <Route path="/" element={<Navigate to="/create" replace />} />
+              <Route path="/" element={<Navigate to="/" />} />
               <Route path="/create" element={<CreateFormPage />} />
               <Route path="/preview" element={<PreviewPage />} />
               <Route path="/myforms" element={<MyFormsPage />} />
