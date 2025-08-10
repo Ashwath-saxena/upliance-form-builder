@@ -1,69 +1,115 @@
-# React + TypeScript + Vite
+# Upliance.ai Form Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A dynamic, fully featured form builder created for the upliance.ai Associate Software Developer assignment. Build, preview, and manage forms with ease using modern React, TypeScript, Redux Toolkit, and Material-UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+[Deployed Application](https://upliance-form-builder-chi.vercel.app/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Frontend:** React 18 + TypeScript
+- **State Management:** Redux Toolkit
+- **UI Framework:** Material-UI (MUI)
+- **Storage:** localStorage (browser)
+- **Build Tool:** Vite
+- **Deployment:** Vercel
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## ✨ Features
+
+### 🏗️ Form Builder (`/create`)
+- **7 Field Types:** Text, Number, Textarea, Select, Radio, Checkbox, Date
+- **Configurable Fields:** Label, Required, Default value
+- **Advanced Validation:** Min/max length, Email, Password
+- **Derived Fields:** Create computed fields using formulas (e.g., Age from Date of Birth)
+- **Field Reordering/Deleting:** Drag-drop reordering, safe deletion with dependency checks
+- **Persistence:** Save forms to localStorage
+
+### 👀 Form Preview (`/preview`)
+- **Interactive Forms:** Real-time rendering of built forms
+- **Validation Feedback:** Inline error messages for all rules
+- **Auto-Updating Derived Fields:** Computed values update automatically
+- **Submission:** Full validation before submit
+- **"Validate All" Button:** Check all fields at once
+
+### 📂 My Forms (`/myforms`)
+- **Saved Forms List:** Browse all forms saved in localStorage
+- **Metadata:** See form name and creation date
+- **Quick Navigation:** Open form directly in preview mode
+
+---
+
+## 🎯 Assignment Requirements Fulfilled
+
+- ✅ All 7 field types implemented
+- ✅ Full field configuration options
+- ✅ All validation rules (required, length, email, password)
+- ✅ Derived fields with parent selection & formulas
+- ✅ Field management (reorder, delete with dependency checks)
+- ✅ Form saving (localStorage)
+- ✅ Interactive preview with validation
+- ✅ Saved forms management UI
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- **Node.js** v18+ and **npm**
+
+### Installation
+
+```bash
+git clone https://github.com/YOUR_USERNAME/upliance-form-builder.git
+cd upliance-form-builder
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Build for Production
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
 ```
+
+---
+
+## 📱 Features Showcase
+
+- **Responsive UI:** Works on mobile and desktop
+- **Theme Support:** Light & dark mode toggle
+- **Modern UI:** Glassmorphism, smooth animations
+- **Type Safety:** 100% TypeScript
+- **Comprehensive Validation:** Robust error handling and feedback
+- **Accessibility:** ARIA support, full keyboard navigation
+
+---
+
+## 🏗️ Project Structure
+
+```
+src/
+├── components/   # Reusable UI components
+├── features/     # Redux slices & feature modules
+├── pages/        # Route-level components
+├── utils/        # Utility functions & types
+├── hooks/        # Custom React hooks
+└── app/          # Redux store configuration
+```
+
+---
+
+## 📄 License
+
+This project was created exclusively for the upliance.ai Associate Software Developer assignment.
+
+---
+
+**Developed by:** [Ashwath Saxena]  
+**Assignment:** upliance.ai Associate Software Developer
